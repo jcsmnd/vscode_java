@@ -37,7 +37,7 @@ class E02 {
 
         b[0] = 1;
         b[1] = 2;
-        //b[2] = 3;
+        b[2] = 3;
 
         System.out.println(b[0]++);
         System.out.println(b[0]);
