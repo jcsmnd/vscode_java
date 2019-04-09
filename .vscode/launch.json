@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - E03",
+            "request": "launch",
+            "mainClass": "E03",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - E02",
             "request": "launch",
             "mainClass": "E02",

@@ -1,8 +1,18 @@
+package com.mkim.exercise;
+
 class E01{
     public static void main(String[] args){
         int x[] = {2,3,5};
         int y = 2;
         findLast(x,y);
+
+        int sum = 0;
+        for(int i=1; i<1000; i++){
+            if(i%3==0 || i%5==0){
+                sum+=i;
+            }
+        }
+        System.out.println(sum);
     }
 
     public static int findLast(int[] x, int y){
