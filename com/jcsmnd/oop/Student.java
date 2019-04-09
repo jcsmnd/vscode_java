@@ -1,7 +1,7 @@
 //Written by Myungsik Kim
 package com.jcsmnd.oop;
 
-class Student extends Person{
+class Student extends Person implements viewStudent{
     
     private int sid;
 
@@ -15,6 +15,10 @@ class Student extends Person{
 
     public void info(){ //method overriding
         super.info();
+        System.out.println("Student ID:"+getSid());
+    }
+
+    public void view(){ //interface method
         System.out.println("Student ID:"+getSid());
     }
 }

@@ -1,7 +1,7 @@
 //Written by Myungsik Kim
 package com.jcsmnd.oop;
 
-class Person{
+abstract class Person implements viewPerson{
     
     private String name, phone, email, address, dob;
     
@@ -31,4 +31,6 @@ class Person{
         System.out.println("Physical address:"+getAddress());
         System.out.println("Date of Birth:"+getDoB());
     }
+
+    public abstract void admin(); //this is admin access only
 }
