@@ -1,4 +1,4 @@
-package com.jcsmnd.ProblemSolving;
+package com.jcsmnd.problemsolving;
 
 class E01{
     public static void main(String[] args){

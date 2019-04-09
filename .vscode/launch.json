@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Enum01",
+            "request": "launch",
+            "mainClass": "Enum01",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "com.jcsmnd.oop.Main",

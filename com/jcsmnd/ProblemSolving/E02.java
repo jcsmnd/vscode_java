@@ -1,4 +1,4 @@
-package com.jcsmnd.ProblemSolving;
+package com.jcsmnd.problemsolving;
 import java.util.ArrayList;
 import java.util.List;
 
