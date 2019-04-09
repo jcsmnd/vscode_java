@@ -10,6 +10,7 @@ class Main{
         
         //overriding
         p[0].info();
+        
         p[1] = new Teacher("Teacher01", "111-223-4252", "microsoft@microsoft.com", "222dev st, apsw, calwo 22102", "1902-05-12", 200802, "freshman class teacher");
        
         //overriding

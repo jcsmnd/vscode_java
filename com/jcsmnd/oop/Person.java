@@ -25,11 +25,12 @@ abstract class Person implements viewPerson{
     public void setDoB(String dob) {this.dob = dob;}
 
     public void info(){
-        System.out.println("Full name:"+getName());
-        System.out.println("Phone number:"+getPhone());
-        System.out.println("Email address:"+getEmail());
-        System.out.println("Physical address:"+getAddress());
-        System.out.println("Date of Birth:"+getDoB());
+        System.out.println("-----------------------------");
+        System.out.println("Full name: "+getName());
+        System.out.println("Phone number: "+getPhone());
+        System.out.println("Email address: "+getEmail());
+        System.out.println("Physical address: "+getAddress());
+        System.out.println("Date of Birth: "+getDoB());
     }
 
     public abstract void admin(); //this is admin access only

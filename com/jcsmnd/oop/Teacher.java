@@ -18,10 +18,11 @@ class Teacher extends Person{
     public void setTid(int tid) {this.tid = tid;}
     public void setDuty(String duty) {this.duty = duty;}
 
-    public void info(){ //method overriding
+    @Override
+    public void info(){
         super.info();
-        System.out.println("Teacher ID:"+getTid());
-        System.out.println("Teacher ID:"+getDuty());
+        System.out.println("Teacher ID: "+getTid());
+        System.out.println("Class room assignment: "+getDuty());
     }
 
 	@Override

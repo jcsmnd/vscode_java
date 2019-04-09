@@ -13,13 +13,15 @@ class Student extends Person implements viewStudent{
     public int getSid() {return sid;}
     public void setSid(int sid) { this.sid = sid;}
 
-    public void info(){ //method overriding
+    @Override
+    public void info(){
         super.info();
-        System.out.println("Student ID:"+getSid());
+        System.out.println("Student ID: "+getSid());
     }
 
     public void view(){ //interface method
-        System.out.println("Student ID:"+getSid());
+        System.out.println("-----------------------------");
+        System.out.println("Student ID: "+getSid());
     }
 
     @Override
