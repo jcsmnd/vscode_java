@@ -1,4 +1,4 @@
-package com.mkim.exercise;
+package com.jcsmnd.exercise;
 
 class student{
     

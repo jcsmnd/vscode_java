@@ -1,4 +1,4 @@
-package com.mkim.exercise;
+package com.jcsmnd.exercise;
 
 class E01{
     public static void main(String[] args){

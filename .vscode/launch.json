@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.oop.Main",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - main",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.oop.main",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - E03",
             "request": "launch",
             "mainClass": "E03",

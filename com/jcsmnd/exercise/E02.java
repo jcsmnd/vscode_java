@@ -1,4 +1,4 @@
-package com.mkim.exercise;
+package com.jcsmnd.exercise;
 import java.util.ArrayList;
 import java.util.List;
 
