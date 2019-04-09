@@ -21,6 +21,11 @@ class Student extends Person implements viewStudent{
     public void view(){ //interface method
         System.out.println("Student ID:"+getSid());
     }
+
+    @Override
+	public void admin() {
+        System.out.println("admin access only");
+	}
 }
 
 class Freshman extends Student{

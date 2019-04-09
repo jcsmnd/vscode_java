@@ -24,4 +24,9 @@ class Teacher extends Person{
         System.out.println("Teacher ID:"+getDuty());
     }
 
+	@Override
+	public void admin() {
+		System.out.println("admin access only");
+	}
+
 }
