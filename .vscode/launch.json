@@ -2,6 +2,111 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - vowels_remove",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.vowels_remove",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - minimum_change",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.minimum_change",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - direction_problem",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.direction_problem",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E01",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E01",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - four_sum",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.four_sum",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - armstrong_number",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.armstrong_number",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - reverse_number_palindrome",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.reverse_number_palindrome",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - second_last_word",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.second_last_word",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E07",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E07",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E06",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E06",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E05",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E05",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E04",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E04",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E03",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E03",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E02",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E02",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Generics",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.generics.Generics",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Enum01",
             "request": "launch",
             "mainClass": "com.jcsmnd.enums.Enum01",
