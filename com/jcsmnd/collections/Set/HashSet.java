@@ -1,6 +1,6 @@
 //Written by Myungsik Kim
 
-package com.jcsmnd.collections.Set;
+package com.jcsmnd.collections.set;
 
 class HashSet{
 
