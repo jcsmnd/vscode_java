@@ -16,24 +16,32 @@ class SingleLinkedlist{
         }
     }
 
-    static void insert(Object data){
-        Node newNode = new Node(data);
-
+    static void append(Object data){
         if(head == null){
-            head = newNode;
-        }else{
-            Node lastNode = head;
-            while(lastNode.next != null){
-                lastNode = lastNode.next;
-            }
-            lastNode.next = newNode;
+            head = new Node(data);
+            return;
         }
+        Node currNode = head;
+        while(currNode.next != null){
+            currNode = currNode.next;
+        }
+        currNode.next = new Node(data);
+    }
+
+    static void prepend(Object data){
+        Node newHead = new Node(data);
+        newHead.next = head;
+        head = newHead;
     }
 
     static void deleteByValue(Object data){
         
         Node currNode = head;
         Node prevNode = null;
+
+        if(head == null){
+            return;
+        }
 
         if(currNode != null && currNode.data == data){
             head = currNode.next;
@@ -100,10 +108,11 @@ class SingleLinkedlist{
 
         SingleLinkedlist list = new SingleLinkedlist();
 
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insert(4);
+        append(1);
+        append(2);
+        append(3);
+        append(4);
+        prepend(5);
      
 
         print(list);
