@@ -1,140 +1,208 @@
-//written by Myungsik Kim
-//singly linkedlist - head only with insert, delete by either value or index, and print
+//written by Myungsik Kim. 04/26/2019 
+//singly linkedlist - head only with insert new node(first, middle, last), delete node(first, middle, last) with value or index, and print list
+
 package com.jcsmnd.datastructures.linear.linkedlist;
 
-class SingleLinkedlist{
-
-    static Node head;
+class SingleLinkedlist {
     
-    static class Node{
+    Node head;
+
+    class Node{
         Object data;
         Node next;
 
-        Node(Object data){ 
+        Node(Object data){
             this.data = data;
             this.next = null;
         }
     }
 
-    static void append(Object data){
+    void addFirst(Object data){
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    void addMiddle(Object data, int index){
+        if(index == 0){
+            addFirst(data);
+        }else{
+            if(head == null || index < 0){
+                System.out.println(index+" index not found");
+                return;
+            }
+            Node currentNode = head;   
+            for(int i=0; i<index-1; i++){
+                    currentNode = currentNode.next;
+                    if(currentNode == null){
+                        System.out.println(index+" index not found");
+                        return;
+                    }
+            }
+            Node temp1 = currentNode;
+            Node temp2 = temp1.next;
+            Node newNode = new Node(data);
+            temp1.next = newNode;
+            newNode.next = temp2;
+        }
+    }
+
+    void addLast(Object data){
         if(head == null){
             head = new Node(data);
             return;
         }
-        Node currNode = head;
-        while(currNode.next != null){
-            currNode = currNode.next;
+        Node currentNode = head;
+        while(currentNode.next != null){
+            currentNode = currentNode.next;
         }
-        currNode.next = new Node(data);
+        currentNode.next = new Node(data);
     }
 
-    static void prepend(Object data){
-        Node newHead = new Node(data);
-        newHead.next = head;
-        head = newHead;
-    }
-
-    static void deleteByValue(Object data){
-        
-        Node currNode = head;
-        Node prevNode = null;
-
+    void deleteFirst(){
         if(head == null){
             return;
         }
-
-        if(currNode != null && currNode.data == data){
-            head = currNode.next;
-            System.out.println(data+" value delete");
-            return;
-        }
-
-        while(currNode != null && currNode.data != data){
-            prevNode = currNode;
-            currNode = currNode.next;
-        }
-
-        if(currNode != null){
-            prevNode.next = currNode.next;
-            System.out.println(data+" value delete");
-        }
-
-        if(currNode == null){
-            System.out.println(data+" not found");
-            return;
-        }
+        Node currentNode = head;
+        head = currentNode.next;
+        System.out.println("first node "+currentNode.data+" deleted");
     }
 
-
-    static void deleteByIndex(int index){
-        Node currNode = head;
-        Node prevNode = null;
-        int counter = 0;
-
-        if(index == 0 && currNode != null){
-            head = currNode.next;
-            System.out.println(index+" index delete");
+    void deleteMiddleByValue(Object data){
+        if(head == null){
             return;
         }
+        if(head.data == data){
+            head = head.next;
+            System.out.println("value "+data+" deleted"); 
+            return;
+        }
+        Node currentNode = head;
+        while(currentNode.next != null){
+            if(currentNode.next.data == data){
+                currentNode.next = currentNode.next.next;
+                System.out.println("value "+data+" deleted");  
+                return;
+            }
+            currentNode = currentNode.next;
+        }
+        System.out.println("value "+data+" not found"); 
+    }
 
-        while(currNode != null){
-            if(counter == index){
-                prevNode.next = currNode.next;
-                System.out.println(index+" index delete");
-                break;
+    void deleteMiddleByIndex(int index){     
+        if(head == null){
+            return;
+        }
+        Node currentNode = head;
+        Node previousNode = null;
+        if(index == 0){    
+            head = currentNode.next;
+            System.out.println("first index "+index+" deleted");
+        }else{
+            if(head == null || index < 0){
+                System.out.println(index+" index not found");
+                return;
+            }    
+            for(int i=0; i<index; i++){
+                    previousNode = currentNode;
+                    currentNode = currentNode.next;
+                    if(currentNode == null){
+                        System.out.println(index+" index not found");
+                        return;
+                    }
+            }
+            if(previousNode == null){
+                head = previousNode;
+                System.out.println("index "+index+" node deleted");  
             }else{
-                prevNode = currNode;
-                currNode = currNode.next;
-                counter++;
+                previousNode.next = currentNode.next;
+                currentNode.next = null;
+                System.out.println("index "+index+" node deleted");   
             }
         }
+    }
 
-        if(currNode == null){
-            System.out.println(index+" index not found");
+    void deleteLast(){
+        Node currentNode = head;
+        Node previousNode = null;
+        if(head == null){
             return;
         }
-    }
-
-    static void print(SingleLinkedlist list){
-        Node currNode = list.head;
-
-        while(currNode != null){
-            System.out.println(currNode.data+" ");
-            currNode = currNode.next;
+        while(currentNode.next != null){
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        if(previousNode == null){
+            head = previousNode;
+            System.out.println("last node "+currentNode.data+" deleted");  
+        }else{
+            previousNode.next = currentNode.next;
+            currentNode.next = null;
+            System.out.println("last node "+currentNode.data+" deleted");   
         }
     }
 
-    public static void main(String[] args){
+    public String toString() {
+        if(head == null){
+            return "list is empty";
+        }       
+        Node temp = head;
+        String str = "";
+        while(temp.next != null){
+            str += temp.data + "->";
+            temp = temp.next;
+        }
+        str += temp.data;
+        return str+"->null";
+    }
 
+    public static void main(String[] args) {
         SingleLinkedlist list = new SingleLinkedlist();
-
-        append(1);
-        append(2);
-        append(3);
-        append(4);
-        prepend(5);
-     
-
-        print(list);
-        System.out.println("---------");
-        deleteByValue(3);
-        System.out.println("---------");
-        print(list);
-
-        System.out.println("---------");
-        deleteByValue(1);
-        System.out.println("---------");
-        print(list);
-        
-        System.out.println("---------");
-        deleteByIndex(0);
-        System.out.println("---------");
-        print(list);
-
-        System.out.println("---------");
-        deleteByValue(4);
-        System.out.println("---------");
-        print(list);
-
+        list.addMiddle(0, 0); //[0->null]
+        System.out.println(list);
+        list.addMiddle(1, 1); //[0->1->null]
+        System.out.println(list);
+        list.addMiddle(2, 2); //[0->1->2->null]
+        System.out.println(list);
+        list.addMiddle(3, 1); //[0->3->1->2->null]
+        System.out.println(list);
+        list.addMiddle(3, 5); //error. no index exists
+        System.out.println(list);
+        list.addMiddle(3, -5); //error. negative index impossible
+        System.out.println(list);
+        list.addFirst(4); //[4->0->3->1->2->null]
+        System.out.println(list);
+        list.addFirst(5); //[5->4->0->3->1->2->null]
+        System.out.println(list);
+        list.addLast(6); //[5->4->0->3->1->2->6->null]
+        System.out.println(list);
+        list.addLast(7); //[5->4->0->3->1->2->6->7->null]
+        System.out.println(list);
+        list.addMiddle(8,8); //[5->4->0->3->1->2->6->7->8->null]
+        System.out.println(list);
+        list.deleteFirst(); //[5->4->0->3->1->2->6->7->8->null] -> remove 5
+        System.out.println(list);
+        list.deleteLast();  //[4->0->3->1->2->6->7->8->null] -> remove 8
+        System.out.println(list);
+        list.deleteLast();  //[4->0->3->1->2->6->7->null] -> remove 7
+        System.out.println(list);
+        list.deleteFirst(); //[4->0->3->1->2->6->null] -> remove 4
+        System.out.println(list);
+        list.deleteLast();  //[0->3->1->2->6->null] -> remove 6
+        System.out.println(list);
+        list.deleteMiddleByValue(2); //[0->3->1->2->null] -> remove 2
+        System.out.println(list);
+        list.deleteMiddleByIndex(2);  //[0->3->1->null] -> remove 1
+        System.out.println(list);
+        list.deleteFirst(); //[0->3->null] -> remove 0
+        System.out.println(list);
+        list.deleteLast();  //[3->null] -> remove 3
+        System.out.println(list); //list is empty now
+        list.deleteLast();  //list is already empty 
+        System.out.println(list);
+        list.deleteMiddleByValue(5);  //list is already empty
+        System.out.println(list);
+        list.deleteMiddleByIndex(0);  //list is already empty
+        System.out.println(list);
     }
 }
