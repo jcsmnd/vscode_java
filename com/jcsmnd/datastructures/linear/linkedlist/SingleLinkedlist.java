@@ -1,4 +1,4 @@
-//written by Myungsik Kim. 04/26/2019 
+//written by jcsmnd.com 04/26/2019 
 //singly linkedlist - head only with insert new node(first, middle, last), delete node(first, middle, last) with value or index, and print list
 
 package com.jcsmnd.datastructures.linear.linkedlist;
@@ -17,12 +17,14 @@ class SingleLinkedlist {
         }
     }
 
+    //insert prepend
     void addFirst(Object data){
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
 
+    //insert index
     void addMiddle(Object data, int index){
         if(index == 0){
             addFirst(data);
@@ -47,6 +49,7 @@ class SingleLinkedlist {
         }
     }
 
+    //insert append
     void addLast(Object data){
         if(head == null){
             head = new Node(data);
@@ -59,6 +62,7 @@ class SingleLinkedlist {
         currentNode.next = new Node(data);
     }
 
+    //delete prepend
     void deleteFirst(){
         if(head == null){
             return;
@@ -68,6 +72,7 @@ class SingleLinkedlist {
         System.out.println("first node "+currentNode.data+" deleted");
     }
 
+    //delete value
     void deleteMiddleByValue(Object data){
         if(head == null){
             return;
@@ -89,6 +94,7 @@ class SingleLinkedlist {
         System.out.println("value "+data+" not found"); 
     }
 
+    //delete index
     void deleteMiddleByIndex(int index){     
         if(head == null){
             return;
@@ -122,6 +128,7 @@ class SingleLinkedlist {
         }
     }
 
+    //delete append
     void deleteLast(){
         Node currentNode = head;
         Node previousNode = null;
@@ -142,6 +149,7 @@ class SingleLinkedlist {
         }
     }
 
+    //printout
     public String toString() {
         if(head == null){
             return "list is empty";
@@ -166,7 +174,7 @@ class SingleLinkedlist {
         System.out.println(list);
         list.addMiddle(3, 1); //[0->3->1->2->null]
         System.out.println(list);
-        list.addMiddle(3, 5); //error. no index exists
+        list.addMiddle(3, 5); //error. index 3 is not exist
         System.out.println(list);
         list.addMiddle(3, -5); //error. negative index impossible
         System.out.println(list);
@@ -203,6 +211,8 @@ class SingleLinkedlist {
         list.deleteMiddleByValue(5);  //list is already empty
         System.out.println(list);
         list.deleteMiddleByIndex(0);  //list is already empty
+        System.out.println(list);
+        list.addMiddle(1, 1); //you can't add because it's an empty list and need to start 0 index
         System.out.println(list);
     }
 }
