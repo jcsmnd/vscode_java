@@ -119,15 +119,11 @@ class SingleLinkedlistWithTail{
         print(list);
         deleteByValue(1);
         print(list);
-        deleteByValue(3);
-        print(list);
-        deleteByIndex(1);
-        print(list);
-        deleteByIndex(1);
-        print(list);
-        deleteByIndex(1);
+        deleteByIndex(2);
         print(list);
         deleteByIndex(0);
+        print(list);
+        deleteByIndex(1);
         print(list);
     }
 }

@@ -18,7 +18,6 @@ class SingleLinkedlist{
 
     static void insert(Object data){
         Node newNode = new Node(data);
-        newNode.next = null;
 
         if(head == null){
             head = newNode;
