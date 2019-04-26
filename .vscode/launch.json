@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SingleLinkedlistWithTail",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.datastructures.linear.linkedlist.SingleLinkedlistWithTail",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SingleLinkedlist",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.datastructures.linear.linkedlist.SingleLinkedlist",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - doubly",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.datastructures.linear.linkedlist.doubly",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - vowels_remove",
             "request": "launch",
             "mainClass": "com.jcsmnd.problemsolving.vowels_remove",
