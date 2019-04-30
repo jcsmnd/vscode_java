@@ -22,6 +22,5 @@ class builtinLL{
         System.out.println(list.get(1));
         System.out.println(list.set(1,11));
         System.out.println(list.getLast()); 
-
     }
 }
