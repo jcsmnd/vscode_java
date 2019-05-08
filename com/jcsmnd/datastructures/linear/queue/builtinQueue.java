@@ -55,9 +55,5 @@ class builtinQueue{
         queue03.offer(1.5f);
         System.out.println(queue03.peek()); //get head includes null.
         System.out.println(queue03.element());//get head if null occur exeception.
-
-
-
-       
     }
 }
