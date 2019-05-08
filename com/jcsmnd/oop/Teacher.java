@@ -6,6 +6,11 @@ class Teacher extends Person{
     private int tid;
     private String duty;
 
+    Teacher(){
+        super();
+        System.out.println("default constructor");
+    }
+
     Teacher(String name, String phone, String email, String address, String dob, int tid, String duty){
         super(name,phone,email,address,dob);
         this.tid = tid;
