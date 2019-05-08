@@ -3,7 +3,7 @@
 
 package com.jcsmnd.datastructures.linear.linkedlist;
 
-import java.util.LinkedList;
+import java.util.LinkedList; //doubly-linked and cicrular
 
 class builtinLL{
     public static void main(String[] args) {
