@@ -4,11 +4,11 @@ package com.jcsmnd.datastructures.linear.linkedlist;
 
 class SingleLinkedlistWithTail{
 
-    static Node head;
-    static Node tail;
-    static int nodeSize = 0;
+    Node head;
+    Node tail;
+    int nodeSize = 0;
     
-    static class Node{
+    class Node{
         Object data;
         Node next;
 
@@ -18,8 +18,24 @@ class SingleLinkedlistWithTail{
         }
     }
 
-    static void insert(Object data){
+    void insertFirst(Object data){
+        
         Node newNode = new Node(data);
+        newNode.next = head;
+        
+        head = newNode;
+        
+        nodeSize++;
+        
+        if(head.next == null){
+            tail = head;
+        }
+    }
+
+    void insertLast(Object data){
+        
+        Node newNode = new Node(data);
+        
         if(nodeSize == 0){ 
             newNode.next = head;
             head = newNode;
@@ -28,10 +44,11 @@ class SingleLinkedlistWithTail{
             tail.next = newNode;
             tail = newNode;
         }
+        
         nodeSize++;
     }
 
-    static void deleteByValue(Object data){
+    void deleteByValue(Object data){ //if duplicates, delete first element left to right.
         Node currNode = head;
         Node prevNode = null;
         if(currNode != null && currNode.data == data){
@@ -58,7 +75,7 @@ class SingleLinkedlistWithTail{
         nodeSize--;
     }
 
-    static void deleteByIndex(int index){
+    void deleteByIndex(int index){
         Node currNode = head;
         Node prevNode = null;
         int counter = 0;
@@ -89,7 +106,7 @@ class SingleLinkedlistWithTail{
         nodeSize--;
     }
 
-    static void print(SingleLinkedlistWithTail list){
+    void print(SingleLinkedlistWithTail list){
         Node currNode = head;
         System.out.println("-----list start-----");
         while(currNode != null){
@@ -108,22 +125,23 @@ class SingleLinkedlistWithTail{
 
         SingleLinkedlistWithTail list = new SingleLinkedlistWithTail();
         
-        insert(1);
-        insert(2);
-        insert(3);
-        insert(4);
-        insert(5);
-        insert(6);
-        print(list);
-        deleteByValue(2);
-        print(list);
-        deleteByValue(1);
-        print(list);
-        deleteByIndex(2);
-        print(list);
-        deleteByIndex(0);
-        print(list);
-        deleteByIndex(1);
-        print(list);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(3);
+        list.insertLast(4);
+        list.insertLast(5);
+        list.insertLast(6);
+        list.insertFirst(0);
+        list.print(list);
+        list.deleteByValue(2);
+        list.print(list);
+        list.deleteByValue(1);
+        list.print(list);
+        list.deleteByIndex(2);
+        list.print(list);
+        list.deleteByIndex(0);
+        list.print(list);
+        list.deleteByIndex(1);
+        list.print(list);
     }
 }
