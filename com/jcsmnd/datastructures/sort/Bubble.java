@@ -5,7 +5,7 @@ package com.jcsmnd.datastructures.sort;
 
 class Bubble{
     public static void main(String args[]){
-        int temp;
+        int temp=0;
         int[] array = {5,8,6,10,9,1,4,3,7,2};
 
         for(int i = 0; i < array.length; i++){
