@@ -17,14 +17,14 @@ class SingleLinkedlist {
         }
     }
 
-    //insert prepend
+    //insert head
     void addFirst(Object data){
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
 
-    //insert index
+    //insert middle with index
     void addMiddle(Object data, int index){
         if(index == 0){
             addFirst(data);
@@ -49,7 +49,7 @@ class SingleLinkedlist {
         }
     }
 
-    //insert append
+    //insert end of list
     void addLast(Object data){
         if(head == null){
             head = new Node(data);
@@ -62,7 +62,7 @@ class SingleLinkedlist {
         currentNode.next = new Node(data);
     }
 
-    //delete prepend
+    //delete head
     void deleteFirst(){
         if(head == null){
             return;
@@ -72,7 +72,7 @@ class SingleLinkedlist {
         System.out.println("first node "+currentNode.data+" deleted");
     }
 
-    //delete value
+    //delete by value
     void deleteMiddleByValue(Object data){
         if(head == null){
             return;
@@ -94,7 +94,7 @@ class SingleLinkedlist {
         System.out.println("value "+data+" not found"); 
     }
 
-    //delete index
+    //delete by index
     void deleteMiddleByIndex(int index){     
         if(head == null){
             return;
@@ -128,7 +128,7 @@ class SingleLinkedlist {
         }
     }
 
-    //delete append
+    //delete end of list
     void deleteLast(){
         Node currentNode = head;
         Node previousNode = null;

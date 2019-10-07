@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Freq",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.cerner_final.practice.Freq",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Freq",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.cerner_final.temperature.Freq",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - oop01",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.cerner_final.oop.oop01",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Temperature",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.cerner_final.temperature.Temperature",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - builtinQueue",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.datastructures.linear.queue.builtinQueue",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - builtinStack",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.datastructures.linear.stack.builtinStack",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - builtinLL",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.datastructures.linear.linkedlist.builtinLL",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - singlylinkedlist",
             "request": "launch",
             "mainClass": "com.jcsmnd.datastructures.linear.linkedlist.singlylinkedlist",

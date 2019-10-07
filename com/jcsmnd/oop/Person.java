@@ -1,10 +1,14 @@
 //Written by Myungsik Kim
 package com.jcsmnd.oop;
 
-abstract class Person implements viewPerson{
+abstract class Person implements viewPerson {
     
     private String name, phone, email, address, dob;
     
+    Person(){
+        System.out.println("default constructor");
+    }
+
     Person(String name, String phone, String email, String address, String dob){
         this.name = name;
         this.phone = phone;
