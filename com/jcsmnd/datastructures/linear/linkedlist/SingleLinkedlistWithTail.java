@@ -22,9 +22,7 @@ class SingleLinkedlistWithTail{
         
         Node newNode = new Node(data);
         newNode.next = head;
-        
-        head = newNode;
-        
+        head = newNode;  
         nodeSize++;
         
         if(head.next == null){
@@ -132,6 +130,7 @@ class SingleLinkedlistWithTail{
         list.insertLast(5);
         list.insertLast(6);
         list.insertFirst(0);
+        list.insertFirst(7);
         list.print(list);
         list.deleteByValue(2);
         list.print(list);

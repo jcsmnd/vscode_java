@@ -3,18 +3,26 @@
 
 package com.jcsmnd.datastructures.linear.linkedlist;
 
+import java.util.List;
 import java.util.LinkedList; //doubly-linked and cicrular
 
 class builtinLL{
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<>();
 
-        list.add(0,1);
-        list.add(1,2);
-        list.add(2,3);
-        list.add(3,4);
-        list.add(4,5);
+        list.add(1);
+        list.add(5);
+        list.add(4);
+        list.add(6);
+        list.add(7);
         System.out.println(list);
+
+
+        for(int a : list){
+            System.out.print(a+" ");
+        }
+        System.out.println();
+
         list.addFirst(0);
         System.out.println(list);
         list.addLast(6);

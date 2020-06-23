@@ -150,69 +150,92 @@ class SingleLinkedlist {
     }
 
     //printout
-    public String toString() {
+    public void toPrint() {
         if(head == null){
-            return "list is empty";
+            System.out.println("list is empty");
         }       
-        Node temp = head;
-        String str = "";
-        while(temp.next != null){
-            str += temp.data + "->";
-            temp = temp.next;
+        Node currentNode = head;
+        while(currentNode != null){
+            System.out.print(currentNode.data+"->");
+            currentNode = currentNode.next;
         }
-        str += temp.data;
-        return str+"->null";
     }
+
+    // //printout
+    // public String toString() {
+    //     if(head == null){
+    //         return "list is empty";
+    //     }       
+    //     Node temp = head;
+    //     String str = "";
+    //     while(temp.next != null){
+    //         str += temp.data + "->";
+    //         temp = temp.next;
+    //     }
+    //     str += temp.data;
+    //     return str+"->null";
+    // }
 
     public static void main(String[] args) {
         SingleLinkedlist list = new SingleLinkedlist();
-        list.addMiddle(0, 0); //[0->null]
-        System.out.println(list);
-        list.addMiddle(1, 1); //[0->1->null]
-        System.out.println(list);
-        list.addMiddle(2, 2); //[0->1->2->null]
-        System.out.println(list);
-        list.addMiddle(3, 1); //[0->3->1->2->null]
-        System.out.println(list);
-        list.addMiddle(3, 5); //error. index 3 is not exist
-        System.out.println(list);
-        list.addMiddle(3, -5); //error. negative index impossible
-        System.out.println(list);
-        list.addFirst(4); //[4->0->3->1->2->null]
-        System.out.println(list);
-        list.addFirst(5); //[5->4->0->3->1->2->null]
-        System.out.println(list);
-        list.addLast(6); //[5->4->0->3->1->2->6->null]
-        System.out.println(list);
-        list.addLast(7); //[5->4->0->3->1->2->6->7->null]
-        System.out.println(list);
-        list.addMiddle(8,8); //[5->4->0->3->1->2->6->7->8->null]
-        System.out.println(list);
-        list.deleteFirst(); //[5->4->0->3->1->2->6->7->8->null] -> remove 5
-        System.out.println(list);
-        list.deleteLast();  //[4->0->3->1->2->6->7->8->null] -> remove 8
-        System.out.println(list);
-        list.deleteLast();  //[4->0->3->1->2->6->7->null] -> remove 7
-        System.out.println(list);
-        list.deleteFirst(); //[4->0->3->1->2->6->null] -> remove 4
-        System.out.println(list);
-        list.deleteLast();  //[0->3->1->2->6->null] -> remove 6
-        System.out.println(list);
-        list.deleteMiddleByValue(2); //[0->3->1->2->null] -> remove 2
-        System.out.println(list);
-        list.deleteMiddleByIndex(2);  //[0->3->1->null] -> remove 1
-        System.out.println(list);
-        list.deleteFirst(); //[0->3->null] -> remove 0
-        System.out.println(list);
-        list.deleteLast();  //[3->null] -> remove 3
-        System.out.println(list); //list is empty now
-        list.deleteLast();  //list is already empty 
-        System.out.println(list);
-        list.deleteMiddleByValue(5);  //list is already empty
-        System.out.println(list);
-        list.deleteMiddleByIndex(0);  //list is already empty
-        System.out.println(list);
-        list.addMiddle(1, 1); //you can't add because it's an empty list and need to start 0 index
-        System.out.println(list);
+        
+        list.addLast('c');
+        list.addLast('e');
+        list.addLast('r');
+        list.addLast('n');
+        list.addLast('e');
+        list.addLast('r');
+        list.toPrint();
+
+        list.deleteMiddleByIndex(4);
+        list.toPrint();
+        // list.addMiddle(0, 0); //[0->null]
+        // System.out.println(list);
+        // list.addMiddle(1, 1); //[0->1->null]
+        // System.out.println(list);
+        // list.addMiddle(2, 2); //[0->1->2->null]
+        // System.out.println(list);
+        // list.addMiddle(3, 1); //[0->3->1->2->null]
+        // System.out.println(list);
+        // list.addMiddle(3, 5); //error. index 3 is not exist
+        // System.out.println(list);
+        // list.addMiddle(3, -5); //error. negative index impossible
+        // System.out.println(list);
+        // list.addFirst(4); //[4->0->3->1->2->null]
+        // System.out.println(list);
+        // list.addFirst(5); //[5->4->0->3->1->2->null]
+        // System.out.println(list);
+        // list.addLast(6); //[5->4->0->3->1->2->6->null]
+        // System.out.println(list);
+        // list.addLast(7); //[5->4->0->3->1->2->6->7->null]
+        // System.out.println(list);
+        // list.addMiddle(8,8); //[5->4->0->3->1->2->6->7->8->null]
+        // System.out.println(list);
+        // list.deleteFirst(); //[5->4->0->3->1->2->6->7->8->null] -> remove 5
+        // System.out.println(list);
+        // list.deleteLast();  //[4->0->3->1->2->6->7->8->null] -> remove 8
+        // System.out.println(list);
+        // list.deleteLast();  //[4->0->3->1->2->6->7->null] -> remove 7
+        // System.out.println(list);
+        // list.deleteFirst(); //[4->0->3->1->2->6->null] -> remove 4
+        // System.out.println(list);
+        // list.deleteLast();  //[0->3->1->2->6->null] -> remove 6
+        // System.out.println(list);
+        // list.deleteMiddleByValue(2); //[0->3->1->2->null] -> remove 2
+        // System.out.println(list);
+        // list.deleteMiddleByIndex(2);  //[0->3->1->null] -> remove 1
+        // System.out.println(list);
+        // list.deleteFirst(); //[0->3->null] -> remove 0
+        // System.out.println(list);
+        // list.deleteLast();  //[3->null] -> remove 3
+        // System.out.println(list); //list is empty now
+        // list.deleteLast();  //list is already empty 
+        // System.out.println(list);
+        // list.deleteMiddleByValue(5);  //list is already empty
+        // System.out.println(list);
+        // list.deleteMiddleByIndex(0);  //list is already empty
+        // System.out.println(list);
+        // list.addMiddle(1, 1); //you can't add because it's an empty list and need to start 0 index
+        // System.out.println(list);
     }
 }

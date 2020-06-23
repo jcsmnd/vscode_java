@@ -2,6 +2,25 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - test01",
+            "request": "launch",
+            "mainClass": "com.test01",
+            "projectName": "vscode_java_46a07546"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.oop.Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - E01",
+            "request": "launch",
+            "mainClass": "com.jcsmnd.problemsolving.E01"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Freq",
             "request": "launch",
             "mainClass": "com.jcsmnd.cerner_final.practice.Freq",
